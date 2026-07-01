@@ -14,6 +14,23 @@ void main() {
     };
   print("คะแนนวิชา Math : ${studentScores['Math']}");
   studentScores['Game'] = 90;
-  print(studentScores.keys);
-  print(studentScores.values);
+  print("Update คะแนน : $studentScores");
+  print("วิชาทั้งหมด : ${studentScores.keys}");
+    print("คะแนนทั้งหมด : ${studentScores.values}");
+  
+  print(" ");
+  print("วิชาที่มีตัว a เป็นส่วนประกอบ");
+  studentScores.forEach((subject, score) {
+    if (subject.toLowerCase().contains('a')) {
+      print('$subject: $score');
+    }
+  });
+   print(" ");
+  print("วิชาที่ได้คะแนนมากกว่า 50");
+   studentScores.forEach((subject, score) {
+    if (score > 50) {
+      print('$subject: $score');
+    }
+  });
+  
   }
